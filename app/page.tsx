@@ -1,22 +1,23 @@
 
-import { SignUpButton, SignedIn, SignedOut, SignOutButton } from '@clerk/nextjs'
-import React from 'react'
+import React from 'react';
+import Header from '@/components/landing/Header';
+import Hero from '@/components/landing/Hero';
+import HowItWorks from '@/components/landing/HowItWorks';
+import WhatToAsk from '@/components/landing/WhatToAsk';
+import Pricing from '@/components/landing/Pricing';
+import CTA from '@/components/landing/CTA';
+import Footer from '@/components/landing/Footer'; 
 
 const page = () => {
   return (
-    <main className='h-screen w-screen flex flex-col justify-center items-center'>
-      
-      <h1 className='text-3xl font-bold '>Home Page</h1>
-      <SignedOut>
-        <div className='mb-4 border-2 p-2 rounded '>
-          <SignUpButton mode="modal">Sign Up</SignUpButton>
-        </div>
-      </SignedOut>
-      <SignedIn>
-        <div className='mb-4 border-2 p-2 rounded '>
-          <SignOutButton>Log Out</SignOutButton>
-        </div>
-      </SignedIn>
+    <main className='h-screen bg-background'>
+      <Header />
+      <Hero />
+      <HowItWorks />
+      <WhatToAsk />
+      <Pricing />
+      <CTA />
+      <Footer />
     </main>
   )
 }
